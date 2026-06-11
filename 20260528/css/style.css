@@ -1,0 +1,56 @@
+.carousel-inner img{
+    border-radius: 20px;
+}
+#carouselExampleCaptions{
+    margin-top:100px;
+}
+.card-btn {
+    display: inline-block;
+    padding: 10px 24px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333333;
+    text-decoration: none;  
+    border: 1.5px solid #cccccc; 
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+}
+/* 滑鼠懸停效果，讓按鈕更有互動感 */
+.card-btn:hover {
+    background-color: #ffc107; /* 麥當勞經典黃色 */
+    border-color: #ffc107;
+    color: #000;
+}
+#cd {
+    margin-top: 100px;
+}
+#cd h5{
+    font-size: 1.3em;
+    font-weight: bold;
+}
+/* 修正圓角裁切問題 */
+
+#cd .card-body {
+    display: flex;
+    flex-direction: column;
+}
+/* 修正圓角裁切並加上自訂框線 */
+#cd .card {
+    border-radius: 20px;
+    overflow: hidden; /* 確保圖片不會超出圓角的範圍 */
+    
+    /* 自訂框線：2px 粗細、實線、深灰色（可依喜好調整顏色） */
+    border: 2px solid #cccccc; 
+    
+    /* 選擇性加入：讓卡片有一點點細緻的陰影，看起來更立體 */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05); 
+    
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* 滑鼠移上去時的小特效（卡片會微微浮起，框線變麥當勞金黃色） */
+#cd .card:hover {
+    transform: translateY(-5px);
+    border-color: #ffc107; /* 麥當勞經典黃 */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}

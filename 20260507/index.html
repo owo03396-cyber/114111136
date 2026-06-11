@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手遊活躍度調查問卷</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="survey-container">
+        <div class="header">
+            <h1>📱 手遊活躍度清單</h1>
+            <div class="notice">
+                ❗快來使用此範本，可以編輯這份範本的所有內容、圖片。<br>
+                你在手遊中的活躍程度如何？花個幾分鐘讓我們知道你對手遊的使用情況與看法吧！
+            </div>
+        </div>
+
+        <form id="gameSurvey" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+                <label class="question-title">1. 請問你的性別：</label>
+                <div class="options-group">
+                    <label class="option-label"><input type="radio" name="gender" value="生理男"
+                            required><span>生理男</span></label>
+                    <label class="option-label"><input type="radio" name="gender" value="生理女"><span>生理女</span></label>
+                    <label class="option-label"><input type="radio" name="gender" value="其他"><span>其他</span></label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="question-title" for="age">2. 請問你今年幾歲：</label>
+                <input type="number" id="age" name="age" min="1" max="120" placeholder="請輸入年齡" required>
+            </div>
+
+            <div class="form-group">
+                <label class="question-title">3. 請問你目前最常玩的手遊類型：</label>
+                <div class="options-group">
+                    <label class="option-label"><input type="radio" name="game_type" value="角色扮演"
+                            required><span>角色扮演</span></label>
+                    <label class="option-label"><input type="radio" name="game_type" value="射擊"><span>射擊</span></label>
+                    <label class="option-label"><input type="radio" name="game_type" value="策略"><span>策略</span></label>
+                    <label class="option-label"><input type="radio" name="game_type"
+                            value="模擬經營"><span>模擬經營</span></label>
+                    <label class="option-label"><input type="radio" name="game_type"
+                            value="休閒益智"><span>休閒益智</span></label>
+                    <label class="option-label"><input type="radio" name="game_type" value="其他"><span>其他</span></label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="question-title">4. 你每天大約花多少時間在手遊上？</label>
+                <div class="options-group">
+                    <label class="option-label"><input type="radio" name="play_time" value="1 小時以下" required><span>1
+                            小時以下</span></label>
+                    <label class="option-label"><input type="radio" name="play_time" value="1 - 2 小時"><span>1 - 2
+                            小時</span></label>
+                    <label class="option-label"><input type="radio" name="play_time" value="2 - 3 小時"><span>2 - 3
+                            小時</span></label>
+                    <label class="option-label"><input type="radio" name="play_time" value="3 小時以上"><span>3
+                            小時以上</span></label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="question-title" for="favorite_game">5. 你最喜歡的手遊是什麼？</label>
+                <input type="text" id="favorite_game" name="favorite_game" placeholder="例如：傳說對決、原神..." required>
+            </div>
+
+            <div class="form-group">
+                <label class="question-title">6. 你在手遊中最看重哪些特性？（可複選）</label>
+                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="features"
+                            value="遊戲畫面"><span>遊戲畫面</span></label>
+                    <label class="option-label"><input type="checkbox" name="features"
+                            value="遊戲劇情"><span>遊戲劇情</span></label>
+                    <label class="option-label"><input type="checkbox" name="features"
+                            value="社交互動"><span>社交互動</span></label>
+                    <label class="option-label"><input type="checkbox" name="features"
+                            value="遊戲難度"><span>遊戲難度</span></label>
+                    <label class="option-label"><input type="checkbox" name="features"
+                            value="其他"><span>其他</span></label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="question-title">7. 你對手遊的付費意願如何？</label>
+                <div class="options-group">
+                    <label class="option-label"><input type="radio" name="pay_will" value="非常願意"
+                            required><span>非常願意</span></label>
+                    <label class="option-label"><input type="radio" name="pay_will" value="願意"><span>願意</span></label>
+                    <label class="option-label"><input type="radio" name="pay_will" value="普通"><span>普通</span></label>
+                    <label class="option-label"><input type="radio" name="pay_will" value="不願意"><span>不願意</span></label>
+                    <label class="option-label"><input type="radio" name="pay_will"
+                            value="非常不願意"><span>非常不願意</span></label>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">送出問卷</button>
+        </form>
+    </div>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('問卷已成功送出！感謝您的填寫。');
+            document.getElementById('gameSurvey').reset();
+        }
+    </script>
+
+</body>
+
+</html>
